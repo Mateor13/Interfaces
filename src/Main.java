@@ -17,10 +17,16 @@ public class Main {
             int division = numero1 / numero2;
         }
         JOptionPane.showMessageDialog(null, "El resultado de la suma es: " + suma + "\nLa resta es: " + resto + "\nLa multiplicación es " + multiplicacion + "\nLa división es: " + division, "Suma de dos enteros", JOptionPane.PLAIN_MESSAGE);*/
-    JFrame frame = new JFrame("Mi aplicación");
+    /*JFrame frame = new JFrame("Mi aplicación");
     frame.setContentPane(new Form1().mainPanel);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();
-    frame.setVisible(true);
+    frame.setVisible(true);*/
+
+    JFrame login = new JFrame("Inicio Sesion");
+        login.setContentPane(new login().main);
+        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        login.pack();
+        login.setVisible(true);
     }
 }
