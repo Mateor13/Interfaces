@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Java.Form1">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="60" left="100" bottom="60" right="100"/>
     <constraints>
       <xy x="20" y="20" width="763" height="400"/>
     </constraints>
     <properties>
-      <background color="-16777216"/>
+      <background color="-9847178"/>
       <font name="Wide Latin" size="36" style="1"/>
       <foreground color="-2104859"/>
     </properties>
@@ -15,36 +15,79 @@
       <color color="-394241"/>
     </border>
     <children>
-      <component id="6538b" class="javax.swing.JButton" binding="btnOK">
+      <component id="d2c8" class="javax.swing.JLabel" binding="LabelOK">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <enabled value="true"/>
+          <font size="36"/>
+          <foreground color="-1"/>
+          <text value="Respuesta:"/>
+        </properties>
+      </component>
+      <component id="6538b" class="javax.swing.JButton" binding="rest">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-14210772"/>
           <foreground color="-1"/>
-          <text value="Aplastar"/>
+          <text value="-"/>
         </properties>
       </component>
-      <component id="d2c8" class="javax.swing.JLabel" binding="JLabel">
+      <component id="59575" class="javax.swing.JTextField" binding="prim">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="f4e86" class="javax.swing.JTextField" binding="seg">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="59a37" class="javax.swing.JLabel" binding="Resultado">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-16777216"/>
-          <enabled value="false"/>
-          <font/>
-          <foreground color="-1"/>
-          <text value="Aplasta el botón"/>
+          <text value=""/>
         </properties>
       </component>
-      <component id="20d29" class="javax.swing.JButton" binding="borrarButton" default-binding="true">
+      <component id="ff561" class="javax.swing.JButton" binding="sum">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13355980"/>
+          <font/>
           <foreground color="-1"/>
-          <text value="Borrar"/>
+          <text value="+"/>
+        </properties>
+      </component>
+      <component id="20d29" class="javax.swing.JButton" binding="div">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13355980"/>
+          <foreground color="-1"/>
+          <text value="/"/>
+        </properties>
+      </component>
+      <component id="a072d" class="javax.swing.JButton" binding="multi">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="*"/>
         </properties>
       </component>
     </children>
