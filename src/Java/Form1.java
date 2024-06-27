@@ -1,11 +1,9 @@
 package Java;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Form1 {
-
     private JButton rest;
     public JPanel mainPanel;
     private JLabel respuesta1;
