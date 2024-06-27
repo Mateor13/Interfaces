@@ -8,56 +8,85 @@ public class Form1 {
 
     private JButton rest;
     public JPanel mainPanel;
-    private JLabel LabelOK;
+    private JLabel respuesta1;
     private JButton div;
-    private JTextField prim;
+    private JTextField num1;
     private JButton sum;
-    private JTextField seg;
+    private JTextField num2;
     private JLabel Resultado;
     private JButton multi;
+    private JButton raiz;
+    private JButton potencia;
+    private JLabel respuesta2;
 
     public Form1() {
         sum.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double num1 = Double.parseDouble(prim.getText());
-                double num2 = Double.parseDouble(seg.getText());
+                double num1 = Double.parseDouble(Form1.this.num1.getText());
+                double num2 = Double.parseDouble(Form1.this.num2.getText());
                 double suma = num1 + num2;
-                Resultado.setText(String.valueOf(suma));
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", suma));
+                respuesta2.setText("");
             }
         });
         rest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double num1 = Double.parseDouble(prim.getText());
-                double num2 = Double.parseDouble(seg.getText());
-                double suma = num1 - num2;
-                Resultado.setText(String.valueOf(suma));
+                double num1 = Double.parseDouble(Form1.this.num1.getText());
+                double num2 = Double.parseDouble(Form1.this.num2.getText());
+                double resta = num1 - num2;
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resta));
+                respuesta2.setText("");
             }
         });
         multi.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double num1 = Double.parseDouble(prim.getText());
-                double num2 = Double.parseDouble(seg.getText());
+                double num1 = Double.parseDouble(Form1.this.num1.getText());
+                double num2 = Double.parseDouble(Form1.this.num2.getText());
                 double mul = num1 * num2;
-                Resultado.setText(String.valueOf(mul));
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", mul));
+                respuesta2.setText("");
             }
         });
         div.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double num1 = Double.parseDouble(prim.getText());
-                double num2 = Double.parseDouble(seg.getText());
+                double num1 = Double.parseDouble(Form1.this.num1.getText());
+                double num2 = Double.parseDouble(Form1.this.num2.getText());
                 double divi;
                 if(num2==0){
                     Resultado.setText("No se puede dividir para cero");
                 }else{
                     divi = num1/num2;
-                Resultado.setText(String.valueOf(divi));}
+                    respuesta1.setText("Respuesta: "+ String.format("%.2f", divi));
+                    respuesta2.setText("");
+                }
             }
         });
 
+        raiz.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.sqrt(numero1);
+                float resultado2 = (float) Math.sqrt(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+            }
+        });
+        potencia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado = (float) Math.pow(numero1,numero2);
+                respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
+                respuesta2.setText("");
+            }
+        });
     }
 
 }
