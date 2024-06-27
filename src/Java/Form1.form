@@ -22,7 +22,7 @@
         <properties>
           <background color="-16777216"/>
           <enabled value="true"/>
-          <font size="26"/>
+          <font size="20"/>
           <foreground color="-1"/>
           <text value="Respuesta:"/>
         </properties>
@@ -111,7 +111,7 @@
         <properties>
           <background color="-16777216"/>
           <enabled value="true"/>
-          <font size="26"/>
+          <font size="20"/>
           <foreground color="-1"/>
           <text value=""/>
         </properties>

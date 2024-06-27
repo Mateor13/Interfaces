@@ -13,7 +13,6 @@ public class Form1 {
     private JTextField num1;
     private JButton sum;
     private JTextField num2;
-    private JLabel Resultado;
     private JButton multi;
     private JButton raiz;
     private JButton potencia;
