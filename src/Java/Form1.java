@@ -60,6 +60,7 @@ public class Form1 {
                 double divi;
                 if(num2==0){
                     respuesta1.setText("No se puede dividir para cero");
+                    respuesta2.setText("");
                 }else{
                     divi = num1/num2;
                     respuesta1.setText("Respuesta: "+ String.format("%.2f", divi));
