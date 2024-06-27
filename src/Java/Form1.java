@@ -18,6 +18,8 @@ public class Form1 {
     private JButton raiz;
     private JButton potencia;
     private JLabel respuesta2;
+    private JButton seno;
+    private JButton coseno;
 
     public Form1() {
         sum.addActionListener(new ActionListener() {
@@ -57,7 +59,7 @@ public class Form1 {
                 double num2 = Double.parseDouble(Form1.this.num2.getText());
                 double divi;
                 if(num2==0){
-                    Resultado.setText("No se puede dividir para cero");
+                    respuesta1.setText("No se puede dividir para cero");
                 }else{
                     divi = num1/num2;
                     respuesta1.setText("Respuesta: "+ String.format("%.2f", divi));
@@ -85,6 +87,29 @@ public class Form1 {
                 float resultado = (float) Math.pow(numero1,numero2);
                 respuesta1.setText("Respuesta: "+ String.format("%.2f", resultado));
                 respuesta2.setText("");
+            }
+        });
+        //Integracion de los botones y funciones del seno y coseno
+        seno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.sin(numero1);
+                float resultado2 = (float) Math.sin(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
+            }
+        });
+        coseno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                float numero1 = Float.parseFloat(num1.getText());
+                float numero2 = Float.parseFloat(num2.getText());
+                float resultado1 = (float) Math.cos(numero1);
+                float resultado2 = (float) Math.cos(numero2);
+                respuesta1.setText("Respuesta(del primer numero): "+ String.format("%.2f", resultado1));
+                respuesta2.setText("Respuesta(del segundo numero): "+ String.format("%.2f", resultado2));
             }
         });
     }
